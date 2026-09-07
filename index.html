@@ -3629,6 +3629,23 @@ input,textarea{
   touch-action:none!important;
 }
 
+
+
+/* ===== V18 MOBILE ROUTES — targeted visibility change only ===== */
+@media(max-width:900px){
+  body:not([data-route="home"]) .stage > .left-column,
+  body:not([data-route="home"]) .stage > .right-column{
+    display:none!important;
+  }
+
+  /* With the two homepage sidebars absent, the routed center simply occupies
+     the same mobile page width already defined by .stage. */
+  body:not([data-route="home"]) .stage > .center-column{
+    width:100%!important;
+    order:1!important;
+  }
+}
+
 </style>
 </head>
 <body>
